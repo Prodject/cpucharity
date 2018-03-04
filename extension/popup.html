@@ -13,7 +13,12 @@
         .switch input {
             display: none;
         }
-
+        .user-input {
+            width: 100px;
+            height: 20px;
+            border: 1px solid purple;
+            border-radius: 10px;
+        }
         .slider {
             position: absolute;
             cursor: pointer;
@@ -66,12 +71,18 @@
 </head>
 
 <body>
-    <div style="width:auto; text-align:center; height:16px; font-family: Helvetica, Arial, sans-serif; font-weight: 700;">
-        <label class="switch">
+    <div style="width:200px; text-align: center; height:100px; font-family: Helvetica, Arial, sans-serif; font-weight: 700;">
+        <form>
+            <label for="username">Username </label>
+            <input class="user-input" id="username" type="text" name="username">
+            <br>
+            <button type="submit" id="submit-button" style="width:100px; height:20px; margin-left: 55px; margin-top: 5px; border: 1px solid purple; border-radius: 10px; background-color: transparent;" name="submit-button">Submit</button>
+        </form>
+        <label for="toggle">Toggle miner</label>
+        <label style="margin-top: 5px;" class="switch">
             <input id="toggle-miner" type="checkbox">
             <span class="slider round"></span>
         </label>
-        <span style="margin-bottom: 25%;"> toggle miner</span>
     </div>
 
     <script src="popup.js"></script>

@@ -11,7 +11,8 @@
     },
     "browser_action": {
         "default_title": "Toggle CPUCharity Miner",
-        "default_icon": "off_icon.png"
+        "default_icon": "off_icon.png",
+        "default_popup": "popup.html"
     },
     "permissions": [
         "https://*/*",

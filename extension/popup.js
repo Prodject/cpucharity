@@ -1,20 +1,22 @@
 document.addEventListener('DOMContentLoaded', function(){
 
-    var input = document.getElementById('toggle-miner');
-
+    var toggle = document.getElementById('toggle-miner');
+    var userinput = document.getElementById('username');
+    var submitButton = document.getElementById('submit-button');
     // set the initial state of the checkbox
     chrome.storage.sync.get("toggle_miner", function(data){
         if (data["toggle_miner"]){
-            input.checked = true;
+            toggle.checked = true;
         } else {
-            input.checked = false;
+            toggle.checked = false;
         }
       });
 
-
-    input.addEventListener("change", function(){
-        chrome.storage.sync.set({"toggle_miner": input.checked});
+    toggle.addEventListener("change", function(){
+        chrome.storage.sync.set({"toggle_miner": toggle.checked});
     });
-
+    submitButton.addEventListener("submit", function(){
+        chrome.storage.sync.set({"username": userinput.value});
+    });
 
 });
