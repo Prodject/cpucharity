@@ -48,7 +48,7 @@
               <a class="nav-link js-scroll-trigger" href="#features">Features</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link js-scroll-trigger" href="{% url 'login' %}">Login</a>
+              <a class="nav-link js-scroll-trigger" href="{% url 'dashboard' %}">Start Mining</a>
             </li>
           </ul>
         </div>
@@ -68,7 +68,7 @@
               </div>
               <div class="col-lg-8 mx-auto">
                 <p class="text-faded mb-5">By mining Cryptocurrency in your Browser</p>
-                <a class="btn btn-primary btn-xl js-scroll-trigger" href="#about">Find Out More</a>
+                <a class="btn btn-primary btn-xl js-scroll-trigger" href="{% url 'dashboard' %}">Start Mining</a>
               </div>
             </div>
         </div>
@@ -81,9 +81,13 @@
           <div class="col-lg-8 mx-auto text-center">
             <h2 class="section-heading text-white">About</h2>
             <hr class="light my-4">
-            <p class="text-faded mb-5">
-		Maecenas in sem ut tellus venenatis luctus. Cras at vehicula urna. Donec aliquam eros eget augue feugiat dictum. Integer in lacus in ante feugiat scelerisque. Sed tincidunt dictum lorem, id rhoncus magna aliquam sit amet. Duis vestibulum convallis velit tincidunt scelerisque. Mauris sed sodales eros.
+            <p style="font-size: 18px;" class="text-faded mb-5">
+	              CPU Charity allows you to donate some of your CPU power to solve hashes to benefit charity. By installing our extension, or utilizing our website, your computer will automatically solve complicated math problems to mine cryptocurrency.
             </p>
+            <p style="font-size: 18px;" class="text-faded mb-5">
+	              <strong>Please note, the development version is a proof of concept, and not benefiting charity at this time.</strong>
+            </p>
+
           </div>
         </div>
       </div>
@@ -136,7 +140,7 @@
     <section class="bg-dark text-white">
       <div class="container text-center">
         <h2 class="mb-4">Let's get started.</h2>
-        <a class="btn btn-light btn-xl sr-button" href="{% url 'dashboard' %}">Explore</a>
+        <a class="btn btn-light btn-xl sr-button" href="{% url 'dashboard' %}">Login</a>
       </div>
     </section>
 
